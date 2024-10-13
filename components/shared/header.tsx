@@ -11,6 +11,7 @@ import {
     ShoppingCart,
     Users,
 } from "lucide-react";
+import Link from "next/link";
 
 interface Props {
     className?: string;
@@ -18,10 +19,12 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ className }) => {
     return (
-        <div className={cn("", className)}>
+        <div className={cn("border-b border-gray-200", className)}>
             <Container className="flex items-center justify-between py-12 px-4">
                 <div className="flex items-center gap-4">
-                    <Image src={img} alt="Logo" width={120} height={120} />
+                    <Link href={"/"}>
+                        <Image src={img} alt="Logo" width={120} height={120} />
+                    </Link>
                     <div>
                         <h1 className="2xl uppercase font-black">
                             Pomodoro pizzaiolo
